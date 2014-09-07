@@ -1,0 +1,2 @@
+C:\Users\Varun\Documents\Visual Studio 2010\Projects\Own Projects\SideScroller\SideScroller\SideScrollerContent\obj\x86\Debug\SideScrollerContent.contentprojResolveAssemblyReference.cache
+C:\Users\Varun\Documents\GitHub\project-orb\SideScroller\SideScroller\SideScrollerContent\obj\x86\Debug\SideScrollerContent.contentprojResolveAssemblyReference.cache

@@ -1,0 +1,18 @@
+C:\Users\Varun\Documents\Visual Studio 2010\Projects\Own Projects\SideScroller\SideScroller\SideScroller\bin\x86\Debug\Content\bg_castle.xnb
+C:\Users\Varun\Documents\Visual Studio 2010\Projects\Own Projects\SideScroller\SideScroller\SideScroller\bin\x86\Debug\SideScroller.exe
+C:\Users\Varun\Documents\Visual Studio 2010\Projects\Own Projects\SideScroller\SideScroller\SideScroller\bin\x86\Debug\SideScroller.pdb
+C:\Users\Varun\Documents\Visual Studio 2010\Projects\Own Projects\SideScroller\SideScroller\SideScroller\obj\x86\Debug\SideScroller.csprojResolveAssemblyReference.cache
+C:\Users\Varun\Documents\Visual Studio 2010\Projects\Own Projects\SideScroller\SideScroller\SideScroller\obj\x86\Debug\Microsoft.Xna.Framework.RuntimeProfile.txt
+C:\Users\Varun\Documents\Visual Studio 2010\Projects\Own Projects\SideScroller\SideScroller\SideScroller\obj\x86\Debug\SideScroller.exe
+C:\Users\Varun\Documents\Visual Studio 2010\Projects\Own Projects\SideScroller\SideScroller\SideScroller\obj\x86\Debug\SideScroller.pdb
+C:\Users\Varun\Documents\Visual Studio 2010\Projects\Own Projects\SideScroller\SideScroller\SideScroller\bin\x86\Debug\Content\p1_spritesheet.xnb
+C:\Users\Varun\Documents\Visual Studio 2010\Projects\Own Projects\SideScroller\SideScroller\SideScroller\bin\x86\Debug\Content\p1_front.xnb
+C:\Users\Varun\Documents\GitHub\project-orb\SideScroller\SideScroller\SideScroller\bin\x86\Debug\Content\bg_castle.xnb
+C:\Users\Varun\Documents\GitHub\project-orb\SideScroller\SideScroller\SideScroller\bin\x86\Debug\Content\p1_spritesheet.xnb
+C:\Users\Varun\Documents\GitHub\project-orb\SideScroller\SideScroller\SideScroller\bin\x86\Debug\Content\p1_front.xnb
+C:\Users\Varun\Documents\GitHub\project-orb\SideScroller\SideScroller\SideScroller\bin\x86\Debug\SideScroller.exe
+C:\Users\Varun\Documents\GitHub\project-orb\SideScroller\SideScroller\SideScroller\bin\x86\Debug\SideScroller.pdb
+C:\Users\Varun\Documents\GitHub\project-orb\SideScroller\SideScroller\SideScroller\obj\x86\Debug\SideScroller.csprojResolveAssemblyReference.cache
+C:\Users\Varun\Documents\GitHub\project-orb\SideScroller\SideScroller\SideScroller\obj\x86\Debug\Microsoft.Xna.Framework.RuntimeProfile.txt
+C:\Users\Varun\Documents\GitHub\project-orb\SideScroller\SideScroller\SideScroller\obj\x86\Debug\SideScroller.exe
+C:\Users\Varun\Documents\GitHub\project-orb\SideScroller\SideScroller\SideScroller\obj\x86\Debug\SideScroller.pdb
