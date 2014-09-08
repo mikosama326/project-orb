@@ -125,6 +125,7 @@ namespace SideScroller
                 if (!isJumping)
                 {
                     AnimateWalk(gameTime);
+                    jumpAmount = 20;
                 }
             }
             
@@ -137,6 +138,7 @@ namespace SideScroller
                 if (!isJumping)
                 {
                     AnimateWalk(gameTime);
+                    jumpAmount = 20;
                 }
             }
             
@@ -241,8 +243,7 @@ namespace SideScroller
 
             if (jumpAmount < -20)
             {
-                jumpAmount = 20;
-                //isJumping = false;
+                isJumping = false;
             }
         }
         
