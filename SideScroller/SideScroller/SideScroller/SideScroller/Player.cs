@@ -31,12 +31,15 @@ namespace SideScroller
         
         // Physics Properties
         int jumpAmount = 20;
-        bool isWalkingLeft = false;
+        KeyboardControls playerState;
+
+        //NO LONGER NEEDED
+        /*bool isWalkingLeft = false;
         bool isWalkingRight = false;
         bool isJumping = false;
         bool isStill = true;
         bool isFacingForward = false;
-       
+       */
         #endregion
 
         #region Constructors
@@ -46,12 +49,15 @@ namespace SideScroller
         ///</summary>
         ///<param name="contentManager"> the Game's Content Manager</param>
         ///<param name="position">Position of the Player Chractor</param>
-        public Player(ContentManager contentManager, Vector2 position)
+        public Player(ContentManager contentManager, Vector2 position, KeyboardControls controller)
         {
             //Initializes Player Charactor
             playerOneAnimationStrip = contentManager.Load<Texture2D>(STRIP_NAME);
             playerSourceRectangle = new Rectangle(0, 196, playerOneInitialFrameWidth, playerOneInitialFrameHeight);
             playerDrawRectangle = new Rectangle((int)position.X, (int)position.Y, playerOneInitialFrameWidth, playerOneInitialFrameHeight);
+            
+            //Assigns controller to control the player
+            playerState = controller;
         }
 
         #endregion
@@ -67,6 +73,7 @@ namespace SideScroller
             spriteBatch.Draw(playerOneAnimationStrip, playerDrawRectangle, playerSourceRectangle, Color.White);
         }
 
+        /*
         ///<summary>
         ///Determines The State of the Player
         ///</summary>
@@ -118,7 +125,7 @@ namespace SideScroller
             bool isJumping = false;
             bool isStill = true;
             bool isFacingForward = false;
-        }
+        }*/
 
         /// <summary>
         /// Updates Player Position
@@ -127,24 +134,24 @@ namespace SideScroller
         /// <param name="gameTime">Game Time</param>
         public void Update(KeyboardState pressedKeys, GameTime gameTime)
         {
-            getPlayerState(pressedKeys);
+            playerState.getState(pressedKeys);
 
             ///<summary>
             ///Animations Generated Based on Player Movement
             ///</summary>  
-            if (isJumping)
+            if (playerState.isJumping)
             {
                 //Makes Player Jump and Generates Jump Animation
                 Jump(gameTime);
             }
-            
-            if (isWalkingLeft)
+
+            if (playerState.isWalkingLeft)
             {
                 //Moves Player to the Left
                 DrawRectangleX = DrawRectangleX - 4;
 
                 //Starts Walk Animation, if Not Jumping                
-                if (!isJumping)
+                if (!playerState.isJumping)
                 {
                     AnimateWalk(gameTime);
                     jumpAmount = 20;
@@ -154,14 +161,14 @@ namespace SideScroller
                     animateJump();
                 }
             }
-            
-            if (isWalkingRight)
+
+            if (playerState.isWalkingRight)
             {
                 //Moves Player to the Right
                 DrawRectangleX = DrawRectangleX + 4;
 
                 //Starts Walk Animation, if Not Jumping                
-                if (!isJumping)
+                if (!playerState.isJumping)
                 {
                     AnimateWalk(gameTime);
                     jumpAmount = 20;
@@ -172,7 +179,7 @@ namespace SideScroller
                 }
             }
 
-            if (isStill)
+            if (playerState.isStill)
             {
                 SourceRectangleWidth = 66;
                 SourceRectangleHeight = 92;
@@ -184,7 +191,7 @@ namespace SideScroller
             }
 
 
-            if (isFacingForward)
+            if (playerState.isFacingForward)
             {
                 SourceRectangleWidth = 66;
                 SourceRectangleHeight = 92;
@@ -268,7 +275,7 @@ namespace SideScroller
 
             if (jumpAmount < -20)
             {
-                isJumping = false;
+                playerState.isJumping = false;
             }
         }
 

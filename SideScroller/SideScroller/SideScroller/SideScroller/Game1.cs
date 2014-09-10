@@ -71,7 +71,8 @@ namespace SideScroller
             backgroundRectangle = new Rectangle(0, 0, graphics.PreferredBackBufferWidth, graphics.PreferredBackBufferHeight);
 
             // Loads Player One Data
-            playerOne = new Player(Content, playerOnePosition);
+            KeyboardControls playerOneControls = new KeyboardControls();
+            playerOne = new Player(Content, playerOnePosition, playerOneControls);
         }
 
         /// <summary>
