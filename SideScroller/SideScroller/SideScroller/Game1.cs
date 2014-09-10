@@ -95,10 +95,7 @@ namespace SideScroller
                 this.Exit();
 
             // Updates Charactor Position Based on KeyBoard Input
-            if (Keyboard.GetState().IsKeyDown(Keys.W) || Keyboard.GetState().IsKeyDown(Keys.A) || Keyboard.GetState().IsKeyDown(Keys.S) || Keyboard.GetState().IsKeyDown(Keys.D))
-            {
-                playerOne.Update(Keyboard.GetState(), gameTime);
-            }
+            playerOne.Update(Keyboard.GetState(), gameTime);
 
             base.Update(gameTime);
         }

@@ -67,46 +67,68 @@ namespace SideScroller
             spriteBatch.Draw(playerOneAnimationStrip, playerDrawRectangle, playerSourceRectangle, Color.White);
         }
 
+        ///<summary>
+        ///Determines The State of the Player
+        ///</summary>
+        /// <param name="pressedKeys">Indicates the pressed keys at time of update</param>
+        public void getPlayerState(KeyboardState pressedKeys)
+        {
+            //To revert states to defaults so that the next frame starts afresh
+            resetPlayerState();
+            
+            if (pressedKeys.IsKeyDown(Keys.A) && !pressedKeys.IsKeyDown(Keys.D))
+            {
+                isWalkingLeft = true;
+                isWalkingRight = false;
+                isStill = false;
+                isFacingForward = false;
+            }
+
+            else if (pressedKeys.IsKeyDown(Keys.D) && !pressedKeys.IsKeyDown(Keys.A))
+            {
+                isWalkingRight = true;
+                isWalkingLeft = false;
+                isStill = false;
+                isFacingForward = false;
+            }
+
+            else// if (!pressedKeys.IsKeyDown(Keys.D) && !pressedKeys.IsKeyDown(Keys.A))
+            {
+                isStill = true;
+                isWalkingLeft = false;
+                isWalkingRight = false;
+            }
+
+            if (pressedKeys.IsKeyDown(Keys.W))
+            {
+                isJumping = true;
+                isFacingForward = false;
+            }
+
+            if (isStill && pressedKeys.IsKeyDown(Keys.D) && pressedKeys.IsKeyDown(Keys.A) && !pressedKeys.IsKeyDown(Keys.W))
+            {
+                isFacingForward = true;
+            }
+        }
+
+        void resetPlayerState()
+        {
+            bool isWalkingLeft = false;
+            bool isWalkingRight = false;
+            bool isJumping = false;
+            bool isStill = true;
+            bool isFacingForward = false;
+        }
+
         /// <summary>
         /// Updates Player Position
         /// </summary>
         /// <param name="pressedKeys">Indicates the pressed keys at time of update</param>
         /// <param name="gameTime">Game Time</param>
         public void Update(KeyboardState pressedKeys, GameTime gameTime)
-        {       
-            ///<summary>
-            ///Determines The State of the Player
-            ///</summary>
-            if (pressedKeys.IsKeyDown(Keys.A) && !pressedKeys.IsKeyDown(Keys.D))
-            {
-                isWalkingLeft = true;
-                isWalkingRight = false;
-                isStill = false;
-            }  
-            
-            if (pressedKeys.IsKeyDown(Keys.D) && !pressedKeys.IsKeyDown(Keys.A))
-            {
-                isWalkingRight = true;
-                isWalkingLeft = false;
-                isStill = false;
-            }
+        {
+            getPlayerState(pressedKeys);
 
-            if (pressedKeys.IsKeyDown(Keys.D) && pressedKeys.IsKeyDown(Keys.A))
-            {
-                isStill = true;
-                isWalkingLeft = false;
-                isWalkingRight = false;
-            }
-            if (pressedKeys.IsKeyDown(Keys.W))
-            {
-                isJumping = true;
-            }
-            
-            if (!isStill && !pressedKeys.IsKeyDown(Keys.D) && !pressedKeys.IsKeyDown(Keys.A) && !pressedKeys.IsKeyDown(Keys.W))
-            {
-                isFacingForward = true;
-            }
-            
             ///<summary>
             ///Animations Generated Based on Player Movement
             ///</summary>  
@@ -127,6 +149,10 @@ namespace SideScroller
                     AnimateWalk(gameTime);
                     jumpAmount = 20;
                 }
+                else
+                {
+                    animateJump();
+                }
             }
             
             if (isWalkingRight)
@@ -140,18 +166,23 @@ namespace SideScroller
                     AnimateWalk(gameTime);
                     jumpAmount = 20;
                 }
+                else
+                {
+                    animateJump();
+                }
             }
-            
+
             if (isStill)
             {
                 SourceRectangleWidth = 66;
                 SourceRectangleHeight = 92;
                 DrawRectangleWidth = 66;
                 DrawRectangleHeight = 92;
-
-                playerSourceRectangle.X = 0;
+                 
+                playerSourceRectangle.X = 67;
                 playerSourceRectangle.Y = 196;
             }
+
 
             if (isFacingForward)
             {
@@ -160,7 +191,7 @@ namespace SideScroller
                 DrawRectangleWidth = 66;
                 DrawRectangleHeight = 92;
 
-                playerSourceRectangle.X = 67;
+                playerSourceRectangle.X = 0;
                 playerSourceRectangle.Y = 196;
             }
          }
@@ -230,13 +261,7 @@ namespace SideScroller
         ///<param name="gameTime">XNA Gametime</param>
         private void Jump(GameTime gameTime)
         {
-            SourceRectangleWidth = 67;
-            SourceRectangleHeight = 94;
-            DrawRectangleWidth = 67;
-            DrawRectangleHeight = 94;
-
-            playerSourceRectangle.X = 438;
-            playerSourceRectangle.Y = 93;
+            animateJump();
 
             DrawRectangleY = DrawRectangleY - jumpAmount;
             jumpAmount = jumpAmount - 1;
@@ -245,6 +270,18 @@ namespace SideScroller
             {
                 isJumping = false;
             }
+        }
+
+        private void animateJump()
+        {
+            SourceRectangleWidth = 67;
+            SourceRectangleHeight = 94;
+
+            DrawRectangleWidth = 67;
+            DrawRectangleHeight = 94;
+
+            playerSourceRectangle.X = 438;
+            playerSourceRectangle.Y = 93;
         }
         
         ///<summary>
