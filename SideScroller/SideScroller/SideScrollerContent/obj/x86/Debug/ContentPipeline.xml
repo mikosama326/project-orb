@@ -7,7 +7,7 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
-      <Output>C:\Users\Srija\Desktop\Project Orb\project-orb-master - Copy\SideScroller\SideScroller\SideScroller\bin\x86\Debug\Content\bg_castle.xnb</Output>
+      <Output>C:\Users\Srija\project-orb\SideScroller\SideScroller\SideScroller\bin\x86\Debug\Content\bg_castle.xnb</Output>
       <Time>2014-09-08T22:20:51.2192301+05:30</Time>
     </Item>
     <Item>
@@ -16,7 +16,7 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
-      <Output>C:\Users\Srija\Desktop\Project Orb\project-orb-master - Copy\SideScroller\SideScroller\SideScroller\bin\x86\Debug\Content\p1_spritesheet.xnb</Output>
+      <Output>C:\Users\Srija\project-orb\SideScroller\SideScroller\SideScroller\bin\x86\Debug\Content\p1_spritesheet.xnb</Output>
       <Time>2014-09-08T22:20:51.321244+05:30</Time>
     </Item>
     <Item>
@@ -25,7 +25,7 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
-      <Output>C:\Users\Srija\Desktop\Project Orb\project-orb-master - Copy\SideScroller\SideScroller\SideScroller\bin\x86\Debug\Content\p1_front.xnb</Output>
+      <Output>C:\Users\Srija\project-orb\SideScroller\SideScroller\SideScroller\bin\x86\Debug\Content\p1_front.xnb</Output>
       <Time>2014-09-08T22:20:51.2872389+05:30</Time>
     </Item>
     <BuildSuccessful>true</BuildSuccessful>
@@ -34,10 +34,10 @@
       <TargetProfile>Reach</TargetProfile>
       <BuildConfiguration>Debug</BuildConfiguration>
       <CompressContent>false</CompressContent>
-      <RootDirectory>C:\Users\Srija\Desktop\Project Orb\project-orb-master - Copy\SideScroller\SideScroller\SideScrollerContent\</RootDirectory>
-      <LoggerRootDirectory>C:\Users\Srija\Desktop\Project Orb\project-orb-master - Copy\SideScroller\SideScroller\SideScroller\</LoggerRootDirectory>
-      <IntermediateDirectory>C:\Users\Srija\Desktop\Project Orb\project-orb-master - Copy\SideScroller\SideScroller\SideScrollerContent\obj\x86\Debug\</IntermediateDirectory>
-      <OutputDirectory>C:\Users\Srija\Desktop\Project Orb\project-orb-master - Copy\SideScroller\SideScroller\SideScroller\bin\x86\Debug\Content\</OutputDirectory>
+      <RootDirectory>C:\Users\Srija\project-orb\SideScroller\SideScroller\SideScrollerContent\</RootDirectory>
+      <LoggerRootDirectory>C:\Users\Srija\project-orb\SideScroller\SideScroller\SideScroller\</LoggerRootDirectory>
+      <IntermediateDirectory>C:\Users\Srija\project-orb\SideScroller\SideScroller\SideScrollerContent\obj\x86\Debug\</IntermediateDirectory>
+      <OutputDirectory>C:\Users\Srija\project-orb\SideScroller\SideScroller\SideScroller\bin\x86\Debug\Content\</OutputDirectory>
     </Settings>
     <Assemblies>
       <Assembly>
