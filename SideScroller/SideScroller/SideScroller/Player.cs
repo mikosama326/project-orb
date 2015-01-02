@@ -11,15 +11,15 @@ using Microsoft.Xna.Framework.Media;
 
 namespace SideScroller
 {
-    class Player
+    class Player 
     {
         #region Fields
 
         // Player One Animation Strip Data
         const string STRIP_NAME = "p1_spritesheet";
         Texture2D playerOneAnimationStrip;
-        int playerOneInitialFrameWidth = 66;
-        int playerOneInitialFrameHeight = 92;
+        const int playerOneInitialFrameWidth = 66;
+        const int playerOneInitialFrameHeight = 92;
 
         // Fields Used to Track and Draw Animations 
         Rectangle playerDrawRectangle;
@@ -50,8 +50,8 @@ namespace SideScroller
         {
             //Initializes Player Charactor
             playerOneAnimationStrip = contentManager.Load<Texture2D>(STRIP_NAME);
-            playerSourceRectangle = new Rectangle(0, 196, playerOneInitialFrameWidth, playerOneInitialFrameHeight);
-            playerDrawRectangle = new Rectangle((int)position.X, (int)position.Y, playerOneInitialFrameWidth, playerOneInitialFrameHeight);
+            playerSourceRectangle = new Rectangle(0, 196, 66, 92);
+            playerDrawRectangle = new Rectangle((int)position.X, (int)position.Y, 33, 46);
         }
 
         #endregion
@@ -141,7 +141,7 @@ namespace SideScroller
             if (isWalkingLeft)
             {
                 //Moves Player to the Left
-                DrawRectangleX = DrawRectangleX - 4;
+                DrawRectangleX = DrawRectangleX - 3;
 
                 //Starts Walk Animation, if Not Jumping                
                 if (!isJumping)
@@ -158,7 +158,7 @@ namespace SideScroller
             if (isWalkingRight)
             {
                 //Moves Player to the Right
-                DrawRectangleX = DrawRectangleX + 4;
+                DrawRectangleX = DrawRectangleX + 3;
 
                 //Starts Walk Animation, if Not Jumping                
                 if (!isJumping)
@@ -176,8 +176,6 @@ namespace SideScroller
             {
                 SourceRectangleWidth = 66;
                 SourceRectangleHeight = 92;
-                DrawRectangleWidth = 66;
-                DrawRectangleHeight = 92;
                  
                 playerSourceRectangle.X = 67;
                 playerSourceRectangle.Y = 196;
@@ -188,8 +186,6 @@ namespace SideScroller
             {
                 SourceRectangleWidth = 66;
                 SourceRectangleHeight = 92;
-                DrawRectangleWidth = 66;
-                DrawRectangleHeight = 92;
 
                 playerSourceRectangle.X = 0;
                 playerSourceRectangle.Y = 196;
@@ -277,9 +273,6 @@ namespace SideScroller
             SourceRectangleWidth = 67;
             SourceRectangleHeight = 94;
 
-            DrawRectangleWidth = 67;
-            DrawRectangleHeight = 94;
-
             playerSourceRectangle.X = 438;
             playerSourceRectangle.Y = 93;
         }
@@ -293,8 +286,6 @@ namespace SideScroller
             //Appropriately Modifies Rectangle Widths Based On Sprite Dimensions
             SourceRectangleWidth = 72;
             SourceRectangleHeight = 97;
-            DrawRectangleWidth = 72;
-            DrawRectangleHeight = 97;
 
             elapsedFrameTime += gameTime.ElapsedGameTime.Milliseconds;
 
@@ -336,9 +327,9 @@ namespace SideScroller
                     playerDrawRectangle.X = 0;
                 }
 
-                if (playerDrawRectangle.Right > 800)
+                if (playerDrawRectangle.Right > 1024)
                 {
-                    playerDrawRectangle.X = 800 - playerDrawRectangle.Width;
+                    playerDrawRectangle.X = 1024 - playerDrawRectangle.Width;
                 }
             }
         }
@@ -359,9 +350,9 @@ namespace SideScroller
                     playerDrawRectangle.Y = 0;
                 }
 
-                if (playerDrawRectangle.Bottom > 600)
+                if (playerDrawRectangle.Bottom > 768)
                 {
-                    playerDrawRectangle.Y = 600 - playerDrawRectangle.Height;
+                    playerDrawRectangle.Y = 768 - playerDrawRectangle.Height;
                 }
             }
         }

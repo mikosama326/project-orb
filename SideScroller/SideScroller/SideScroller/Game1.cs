@@ -19,17 +19,17 @@ namespace SideScroller
         GraphicsDeviceManager graphics;
         SpriteBatch spriteBatch;
 
-        //Screen Resolution
-        const int GAME_WINDOW_WIDTH = 800;
-        const int GAME_WINDOW_HEIGHT = 600;
-        
         // Initializations for the Platformer Background
         Texture2D backgroundTexture;
         Rectangle backgroundRectangle;
 
         //Player Initializations
         Player playerOne;
-        Vector2 playerOnePosition = new Vector2(400, 500);
+        Vector2 playerOnePosition = new Vector2(0, 500);
+        
+        //Screen Resolution
+        public const int GAME_WINDOW_WIDTH = 1024;
+        public const int GAME_WINDOW_HEIGHT = 768;
 
         public Game1()
         {
