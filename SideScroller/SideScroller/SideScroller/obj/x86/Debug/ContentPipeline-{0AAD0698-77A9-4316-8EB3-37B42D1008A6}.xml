@@ -8,7 +8,7 @@
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
       <Output>C:\Users\Varun\Documents\GitHub\project-orb\SideScroller\SideScroller\SideScroller\bin\x86\Debug\Content\bg_castle.xnb</Output>
-      <Time>2013-05-20T08:44:36.9771784+05:30</Time>
+      <Time>2014-09-17T14:29:24.6504+05:30</Time>
     </Item>
     <Item>
       <Source>p1_spritesheet.png</Source>
@@ -17,7 +17,7 @@
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
       <Output>C:\Users\Varun\Documents\GitHub\project-orb\SideScroller\SideScroller\SideScroller\bin\x86\Debug\Content\p1_spritesheet.xnb</Output>
-      <Time>2014-01-13T11:32:30.9842+05:30</Time>
+      <Time>2014-09-17T14:29:24.6544+05:30</Time>
     </Item>
     <Item>
       <Source>p1_front.png</Source>
@@ -26,7 +26,7 @@
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
       <Output>C:\Users\Varun\Documents\GitHub\project-orb\SideScroller\SideScroller\SideScroller\bin\x86\Debug\Content\p1_front.xnb</Output>
-      <Time>2014-01-14T22:48:03.723+05:30</Time>
+      <Time>2014-09-17T14:29:24.6534+05:30</Time>
     </Item>
     <BuildSuccessful>true</BuildSuccessful>
     <Settings>
@@ -67,7 +67,7 @@
       </Assembly>
       <Assembly>
         <Key>C:\Windows\Microsoft.Net\assembly\GAC_32\Microsoft.Xna.Framework.Content.Pipeline\v4.0_4.0.0.0__842cf8be1de50553\Microsoft.Xna.Framework.Content.Pipeline.dll</Key>
-        <Value>2013-09-14T22:44:36.8174+05:30</Value>
+        <Value>2014-09-17T16:33:53.8214+05:30</Value>
       </Assembly>
     </Assemblies>
   </Asset>
